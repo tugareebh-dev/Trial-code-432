@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Divya — A New Year Reel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- LOTTIE -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= LOCK SCREEN ================= -->
+<div id="lockScreen">
+  <div class="lockBox">
+    <h1>Private Reel</h1>
+    <p>This story opens only for one heart.</p>
+    <input type="password" id="passwordInput" placeholder="Enter password">
+    <button onclick="checkPassword()">Unlock</button>
+    <div id="errorText"></div>
+  </div>
+</div>
+
+<!-- ================= MUSIC ================= -->
+<audio id="bgMusic" loop>
+  <source src="https://cdn.pixabay.com/audio/2023/03/27/audio_48c2a96c62.mp3" type="audio/mp3">
+</audio>
+
+<!-- ================= FIREWORK CANVAS ================= -->
+<canvas id="fireworks"></canvas>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div id="siteContent" style="display:none;">
+
+<!-- ================= SCENE 1 : HERO ENTRY ================= -->
+<section class="scene heroScene">
+  <div class="artPattern lines"></div>
+
+  <div class="heroContent">
+    <h1>Divya</h1>
+    <p>
+      This is not a website.  
+      This is a scrollable feeling —  
+      every movement carries a piece of what you mean to me.
+    </p>
+  </div>
+
+  <lottie-player
+    src="https://assets10.lottiefiles.com/packages/lf20_tutvdkg0.json"
+    background="transparent"
+    speed="1"
+    loop
+    autoplay
+    class="lottieHero">
+  </lottie-player>
+</section>
+
+<!-- ================= SCENE 2 : CARE ================= -->
+<section class="scene blueScene">
+  <div class="artPattern dots"></div>
+
+  <div class="textBlock">
+    <h2>Care</h2>
+    <p>
+      Care is not about asking every moment.  
+      It is about noticing the silence,  
+      the pause in your voice,  
+      the way your eyes slow down when the world feels heavy.
+    </p>
+    <p>
+      I learned care by watching you exist —  
+      the way you hold emotions softly,  
+      even when you are tired,  
+      even when you say nothing at all.
+    </p>
+  </div>
+
+  <lottie-player
+    src="https://assets2.lottiefiles.com/packages/lf20_kxsd2ytq.json"
+    background="transparent"
+    speed="1"
+    loop
+    autoplay
+    class="lottieSide">
+  </lottie-player>
+</section>
+
+<!-- ================= SCENE 3 : SOFT MOMENTS ================= -->
+<section class="scene whiteScene">
+  <div class="artDivider"></div>
+
+  <div class="textBlock center">
+    <p>
+      Some moments don’t need words.  
+      They just need presence.
+    </p>
+    <p>
+      Sitting quietly, sharing nothing —  
+      yet feeling everything.
+    </p>
+  </div>
+</section>
+
+<!-- ================= SCENE 4 : ANGER ================= -->
+<section class="scene darkBlueScene">
+  <div class="artPattern waves"></div>
+
+  <div class="textBlock">
+    <h2>Anger</h2>
+    <p>
+      Anger is not loud.  
+      Sometimes it is the distance that appears quietly.
+    </p>
+    <p>
+      When you are upset, the world feels colder —  
+      not because you change,  
+      but because I realize how much warmth you bring.
+    </p>
+    <p>
+      Even in anger, you matter more than winning an argument.
+    </p>
+  </div>
+
+  <lottie-player
+    src="https://assets1.lottiefiles.com/packages/lf20_jtbfg2nb.json"
+    background="transparent"
+    speed="1"
+    loop
+    autoplay
+    class="lottieSide">
+  </lottie-player>
+</section>
+
+<!-- ================= SCENE 5 : REALIZATION ================= -->
+<section class="scene blueScene">
+  <div class="glowLayer"></div>
+
+  <div class="textBlock center">
+    <h2>Realization</h2>
+    <p>
+      Loving you taught me that understanding  
+      is more powerful than reacting.
+    </p>
+    <p>
+      That staying calm can save moments  
+      that anger tries to destroy.
+    </p>
+  </div>
+</section>
+
+<!-- ================= SCENE 6 : IMPORTANCE ================= -->
+<section class="scene whiteScene">
+  <div class="artPattern grid"></div>
+
+  <div class="textBlock">
+    <h2>Your Importance</h2>
+    <p>
+      You are not a chapter.  
+      You are the direction.
+    </p>
+    <p>
+      Decisions feel easier when your presence exists in them —  
+      not because you decide for me,  
+      but because you make choices feel meaningful.
+    </p>
+    <p>
+      You are the calm after confusion,  
+      the pause that brings clarity.
+    </p>
+  </div>
+</section>
+
+<!-- ================= SCENE 7 : FUN ================= -->
+<section class="scene blueScene">
+  <div class="artPattern spark"></div>
+
+  <div class="textBlock center">
+    <h2>Fun</h2>
+    <p>
+      Fun is laughing at nothing,  
+      teasing without reason,  
+      turning ordinary moments into memories.
+    </p>
+    <p>
+      You make seriousness feel lighter,  
+      and silence feel playful.
+    </p>
+  </div>
+
+  <div class="heart" onclick="heartEffect()">❤️</div>
+</section>
+
+<!-- ================= SCENE 8 : GROWTH ================= -->
+<section class="scene whiteScene">
+  <div class="artDivider"></div>
+
+  <div class="textBlock">
+    <h2>Growth</h2>
+    <p>
+      Loving you didn’t change who I am.  
+      It refined me.
+    </p>
+    <p>
+      It taught patience,  
+      it softened reactions,  
+      it replaced ego with effort.
+    </p>
+  </div>
+</section>
+
+<!-- ================= SCENE 9 : FUTURE ================= -->
+<section class="scene blueScene">
+  <div class="artPattern lines"></div>
+
+  <div class="textBlock center">
+    <h2>The Future</h2>
+    <p>
+      The future doesn’t scare me  
+      when I imagine you in it.
+    </p>
+    <p>
+      Not because it will be perfect —  
+      but because it will be real.
+    </p>
+  </div>
+</section>
+
+<!-- ================= SCENE 10 : CELEBRATION ================= -->
+<section class="scene finalScene">
+  <div class="glowLayer"></div>
+
+  <h2>Happy New Year, Divya</h2>
+  <p>
+    This year, and every year after,  
+    I choose effort, patience, laughter, and you.
+  </p>
+
+  <button onclick="celebrate()">Celebrate</button>
+</section>
+
+</div>
+
+<!-- ================= SCRIPT ================= -->
+<script src="script.js"></script>
+
+</body>
+</html>
